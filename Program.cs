@@ -10,12 +10,13 @@ namespace Module5
     {
         //Урок 5.1
         //Создание метода и вызов из разных частей программы
-        static void ShowColor()
+        static /*void*/ string ShowColor()
         {
             Console.WriteLine("Введите свой любимый цвет на английском с маленькой буквы");
 
             var color = Console.ReadLine();
 
+            return (color);
             switch (color)
             {
                 case "red":
@@ -53,7 +54,7 @@ namespace Module5
         {
             //Урок 5.1
             var (name, age) = ("Jarvis", 27);
-
+            
             Console.WriteLine("Моё имя {0}, мой возраст {1}", name, age);
 
             //ShowColor();
@@ -64,9 +65,11 @@ namespace Module5
             age = int.Parse(Console.ReadLine());
 
             //ShowColor();
+            string color = ShowColor();
 
             Console.WriteLine("Ваше имя: {0}", name);
             Console.WriteLine("Ваш возраст: {0}", age);
+            Console.WriteLine("Ваш цвет: {0}", color);
             Console.WriteLine();
 
             //ShowColor();
