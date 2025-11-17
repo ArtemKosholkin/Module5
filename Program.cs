@@ -10,77 +10,103 @@ namespace Module5
     {
         //Урок 5.1
         //Задание 5.1.5 - Напишите программу, которая в цикле вызывает метод ShowColor(), записывает его значение в массив из трех цветов favcolors, а потом отображает значения этого массива. 
-        static /*void*/ string ShowColor()
-        {
-            Console.WriteLine("Введите свой любимый цвет на английском с маленькой буквы");
+        //static /*void*/ string ShowColor()
+        //{
+        //    Console.WriteLine("Введите свой любимый цвет на английском с маленькой буквы");
 
-            var color = Console.ReadLine();
-            
-            switch (color)
-            {
-                case "red":
-                    Console.BackgroundColor = ConsoleColor.Red;
-                    Console.ForegroundColor = ConsoleColor.Black;
+        //    var color = Console.ReadLine();
 
-                    Console.WriteLine("Ваш любимый цвет красный!");
-                    break;
+        //    switch (color)
+        //    {
+        //        case "red":
+        //            Console.BackgroundColor = ConsoleColor.Red;
+        //            Console.ForegroundColor = ConsoleColor.Black;
 
-                case "green":
-                    Console.BackgroundColor = ConsoleColor.Green;
-                    Console.ForegroundColor = ConsoleColor.Black;
+        //            Console.WriteLine("Ваш любимый цвет красный!");
+        //            break;
 
-                    Console.WriteLine("Ваш любимый цвет зелёный!");
-                    break;
+        //        case "green":
+        //            Console.BackgroundColor = ConsoleColor.Green;
+        //            Console.ForegroundColor = ConsoleColor.Black;
 
-                case "cyan":
-                    Console.BackgroundColor = ConsoleColor.Cyan;
-                    Console.ForegroundColor = ConsoleColor.Black;
+        //            Console.WriteLine("Ваш любимый цвет зелёный!");
+        //            break;
 
-                    Console.WriteLine("Ваш любимый цвет голубой!");
-                    break;
+        //        case "cyan":
+        //            Console.BackgroundColor = ConsoleColor.Cyan;
+        //            Console.ForegroundColor = ConsoleColor.Black;
 
-                default:
-                    Console.BackgroundColor = ConsoleColor.Yellow;
-                    Console.ForegroundColor = ConsoleColor.Red;
+        //            Console.WriteLine("Ваш любимый цвет голубой!");
+        //            break;
 
-                    Console.WriteLine("Ваш любимый цвет тот, который вы ввели.");
-                    break;
-            }
-            return(color);
-        }
+        //        default:
+        //            Console.BackgroundColor = ConsoleColor.Yellow;
+        //            Console.ForegroundColor = ConsoleColor.Red;
+
+        //            Console.WriteLine("Ваш любимый цвет тот, который вы ввели.");
+        //            break;
+        //    }
+        //    return(color);
+        //}
         //Конец задания 5.1.5
+
+        //Урок 5.1
+        //Задание 5.1.6 - после ввода массива с клавиатуры необходимо отсортировать массив и вывести его на экран.
+        static int[] GetArrayFromConsole()
+        {
+            var result = new int[5];
+
+            for (int i = 0; i < result.Length; i++)
+            {
+                Console.WriteLine("Введите элемент массива номер {0}", i + 1);
+                result[i] = int.Parse(Console.ReadLine());
+            }
+
+            return result;
+        }
+
 
         static void Main(string[] args)
         {
             //Урок 5.1
+            //Задание 5.1.6 - после ввода массива с клавиатуры необходимо отсортировать массив и вывести его на экран.
+            GetArrayFromConsole();
+
+            int[] array = new int[5];
+
+            for (int i = 0; i < array.Length; i++)
+            {
+                array[i] = int.TryParse.GetArrayFromConsole();
+            }
+
             //Задание 5.1.5 - Напишите программу, которая в цикле вызывает метод ShowColor(), записывает его значение в массив из трех цветов favcolors, а потом отображает значения этого массива. 
-            var (name, age) = ("Jarvis", 27);
+            //var (name, age) = ("Jarvis", 27);
 
-            Console.WriteLine("Моё имя {0}, мой возраст {1}", name, age);
+            //Console.WriteLine("Моё имя {0}, мой возраст {1}", name, age);
 
-            Console.Write("Введите своё имя: ");
-            name = Console.ReadLine();
-            Console.Write("Введите свой возраст: ");
-            age = int.Parse(Console.ReadLine());
+            //Console.Write("Введите своё имя: ");
+            //name = Console.ReadLine();
+            //Console.Write("Введите свой возраст: ");
+            //age = int.Parse(Console.ReadLine());
 
-            //ShowColor();
-            string[] favcolors = new string[3];
+            ////ShowColor();
+            //string[] favcolors = new string[3];
 
-            for (int i = 0; i < favcolors.Length; i++)
-            {
-                favcolors[i] = ShowColor();
-            }
+            //for (int i = 0; i < favcolors.Length; i++)
+            //{
+            //    favcolors[i] = ShowColor();
+            //}
 
-            Console.WriteLine("Ваше имя: {0}", name);
-            Console.WriteLine("Ваш возраст: {0}", age);
-            Console.WriteLine("Ваши цвета:");
+            //Console.WriteLine("Ваше имя: {0}", name);
+            //Console.WriteLine("Ваш возраст: {0}", age);
+            //Console.WriteLine("Ваши цвета:");
 
-            foreach (var color in favcolors)
-            {
-                Console.WriteLine(color);
-            }
+            //foreach (var color in favcolors)
+            //{
+            //    Console.WriteLine(color);
+            //}
 
-            Console.ReadKey();
+            //Console.ReadKey();
             //Конец задания 5.1.5
 
 
@@ -95,7 +121,7 @@ namespace Module5
             //User.Name = Console.ReadLine();
 
             //User.Dishes = new string[5];
-            
+
             //for (int i = 0; i < User.Dishes.Length; i++)
             //{
             //    Console.WriteLine("Введите любимое блюдо номер {0}:", i + 1);
