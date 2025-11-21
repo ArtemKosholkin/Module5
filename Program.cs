@@ -61,23 +61,43 @@ namespace Module5
                 Console.WriteLine("Введите элемент массива номер {0}", i + 1);
                 result[i] = int.Parse(Console.ReadLine());
             }
+            
+            Console.WriteLine();
+
+            for (int i = 0; i < result.Length; i++)
+            {
+                for (int k = i + 1; k < result.Length; k++)
+                {
+                    if (result[i] > result[k])
+                    {
+                        int temp = result[i];
+                        result[i] = result[k];
+                        result[k] = temp;
+                    }
+                }
+            }
+
+            for (int k = 0; k < result.Length; k++)
+            {
+                Console.WriteLine(result[k]);
+            }
+
+            Console.ReadKey();
 
             return result;
         }
-
+        //Конец задания 5.1.6.
 
         static void Main(string[] args)
         {
             //Урок 5.1
             //Задание 5.1.6 - после ввода массива с клавиатуры необходимо отсортировать массив и вывести его на экран.
             GetArrayFromConsole();
+            //Конец задания 5.1.6.
 
-            int[] array = new int[5];
-
-            for (int i = 0; i < array.Length; i++)
-            {
-                array[i] = int.TryParse.GetArrayFromConsole();
-            }
+            //Задание 5.1.7 - Напишите вызов метода GetArrayFromConsole() в переменную array.
+            var array = GetArrayFromConsole();
+            //Конец задания 5.1.7
 
             //Задание 5.1.5 - Напишите программу, которая в цикле вызывает метод ShowColor(), записывает его значение в массив из трех цветов favcolors, а потом отображает значения этого массива. 
             //var (name, age) = ("Jarvis", 27);
